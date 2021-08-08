@@ -104,16 +104,19 @@ QString PinPad::readStatusFifo()
               ui->interface_1_status->setStyleSheet("background-color: rgb(41, 239, 41);");
               ui->interface_1_status->setText("🔑");
               ui->interface_1_status->setToolTip(interfaceName + ":" +ip);
+              ui->key_1->setVisible(false);
           }
           if ( interfaceName.contains("tun1") ) {
               ui->interface_2_status->setStyleSheet("background-color: rgb(41, 239, 41);");
               ui->interface_2_status->setText("🔑");
               ui->interface_2_status->setToolTip(interfaceName + ":" +ip);
+              ui->key_2->setVisible(false);
           }
           if ( interfaceName.contains("tun2") ) {
               ui->interface_3_status->setStyleSheet("background-color: rgb(41, 239, 41);");
               ui->interface_3_status->setText("🔑");
               ui->interface_3_status->setToolTip(interfaceName + ":" +ip);
+              ui->key_2->setVisible(false);
           }
 
         }
@@ -146,6 +149,8 @@ void PinPad::on_connectButton_clicked()
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(readStatusFifo()));
     timer->start(500);
+
+    ui->pinSubmit->setEnabled(true);
 }
 
 void PinPad::on_disconnectButton_clicked()
@@ -167,4 +172,8 @@ void PinPad::on_disconnectButton_clicked()
     ui->interface_1_status->setToolTip("");
     ui->interface_1_status->setToolTip("");
     ui->interface_1_status->setToolTip("");
+    ui->pinSubmit->setEnabled(false);
+    ui->key_1->setVisible(true);
+    ui->key_2->setVisible(true);
+
 }

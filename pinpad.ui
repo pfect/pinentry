@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>191</width>
-    <height>391</height>
+    <width>194</width>
+    <height>463</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>130</y>
+      <y>200</y>
       <width>141</width>
       <height>19</height>
      </rect>
@@ -31,7 +31,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>210</y>
+      <y>280</y>
       <width>171</width>
       <height>101</height>
      </rect>
@@ -75,6 +75,9 @@
      </property>
     </widget>
     <widget class="QPushButton" name="pinSubmit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>30</x>
@@ -82,6 +85,9 @@
        <width>111</width>
        <height>27</height>
       </rect>
+     </property>
+     <property name="toolTip">
+      <string>Enter pin with this button when asked!</string>
      </property>
      <property name="text">
       <string>Enter PIN</string>
@@ -92,7 +98,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>150</y>
+      <y>220</y>
       <width>171</width>
       <height>51</height>
      </rect>
@@ -130,7 +136,7 @@
     <property name="geometry">
      <rect>
       <x>160</x>
-      <y>130</y>
+      <y>200</y>
       <width>21</width>
       <height>21</height>
      </rect>
@@ -212,7 +218,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>340</y>
+      <y>410</y>
       <width>171</width>
       <height>41</height>
      </rect>
@@ -285,7 +291,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>320</y>
+      <y>390</y>
       <width>171</width>
       <height>19</height>
      </rect>
@@ -294,9 +300,72 @@
      <string>Network Interface keying</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>130</y>
+      <width>171</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="images.qrc">:/img/nk.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="key_1">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>145</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>🔑</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="key_2">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>145</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>🔑</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+   </widget>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections/>
 </ui>
