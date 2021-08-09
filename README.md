@@ -1,6 +1,6 @@
 # pinpad
 
-QT frontend for [Nitrokey](https://github.com/nitrokey) enhanced [glorytun](https://github.com/pfect/glorytun) project. Allows you to [start tunnel(s)](https://github.com/pfect/systemd-glorytun) and load key directly from Nitrokey PRO2 device.
+QT frontend for [Nitrokey](https://github.com/nitrokey) enhanced [glorytun](https://github.com/pfect/glorytun) project (changes are in stable brach). Allows you to [start tunnel(s)](https://github.com/pfect/systemd-glorytun) and load key(s) directly from Nitrokey PRO2 device.
 
 ![main window](https://github.com/pfect/pinentry/blob/main/doc/mainwindow.png)
 
@@ -10,7 +10,7 @@ Following picture illustrates dependencies for implementation.
 
 ![system-components](https://github.com/pfect/pinentry/blob/main/doc/glorytun-setup-2.png)
 
-Please note that this is work in progress implementation and documentation is sparse.
+Please note that this is work in progress and documentation is sparse.
 
 ## Links
 
