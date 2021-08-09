@@ -12,3 +12,12 @@ Following picture illustrates dependencies for implementation.
 
 Please note that this is work in progress implementation and documentation is sparse.
 
+## Links
+
+* [systemd scripts for glorytun](https://github.com/pfect/systemd-glorytun)
+* [glorytun with nitrokey support](https://github.com/pfect/glorytun)
+* [libnitrokey](https://github.com/Nitrokey/libnitrokey)
+* [The password hash Argon2, winner of PHC](https://github.com/P-H-C/phc-winner-argon2)
+* [pinentry QT user interface](https://github.com/pfect/pinentry)
+* [Nitrokey Pro 2 hardware](https://www.nitrokey.com/)
+
