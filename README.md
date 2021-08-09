@@ -8,7 +8,7 @@ QT frontend for [Nitrokey](https://github.com/nitrokey) enhanced [glorytun](http
 
 Following picture illustrates dependencies for implementation. 
 
-![system-components](https://github.com/pfect/pinentry/blob/main/doc/glorytun-setup.png)
+![system-components](https://github.com/pfect/pinentry/blob/main/doc/glorytun-setup-2.png)
 
 Please note that this is work in progress implementation and documentation is sparse.
 
