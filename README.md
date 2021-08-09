@@ -1,6 +1,8 @@
 # pinpad
 
-QT frontend for [Nitrokey](https://github.com/nitrokey) enhanced [glorytun](https://github.com/pfect/glorytun) project (changes are in stable brach). Allows you to [start tunnel(s)](https://github.com/pfect/systemd-glorytun) and load key(s) directly from Nitrokey PRO2 device.
+QT frontend for [Nitrokey](https://github.com/nitrokey) enhanced [glorytun](https://github.com/pfect/glorytun) project (changes are in stable branch). Allows you to [start tunnel(s)](https://github.com/pfect/systemd-glorytun) and load key(s) directly from Nitrokey PRO2 device.
+
+With this approach you don't have to store glorytun keys to file system and you can have out of band key exchange with Nitrokey. Systemd scripts provides Tunnel-In-Tunnel (TiT) functionality and it's useful with VPS based glorytun installations where you cannot trust VPS, assuming hostile party has access to file system of any given VPS provider.
 
 ![main window](https://github.com/pfect/pinentry/blob/main/doc/mainwindow.png)
 
