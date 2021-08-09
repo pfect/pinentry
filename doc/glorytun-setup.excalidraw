@@ -798,48 +798,6 @@
       ]
     },
     {
-      "type": "line",
-      "version": 25,
-      "versionNonce": 2081912936,
-      "isDeleted": false,
-      "id": "VGUFA-VcOSuovZRvI4jQV",
-      "fillStyle": "hachure",
-      "strokeWidth": 2,
-      "strokeStyle": "solid",
-      "roughness": 1,
-      "opacity": 100,
-      "angle": 0,
-      "x": 3,
-      "y": 178,
-      "strokeColor": "#1864ab",
-      "backgroundColor": "transparent",
-      "width": 27,
-      "height": 10,
-      "seed": 1388062744,
-      "groupIds": [],
-      "strokeSharpness": "round",
-      "boundElementIds": [],
-      "startBinding": null,
-      "endBinding": null,
-      "lastCommittedPoint": null,
-      "startArrowhead": null,
-      "endArrowhead": null,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          27,
-          -2
-        ],
-        [
-          24,
-          -10
-        ]
-      ]
-    },
-    {
       "type": "arrow",
       "version": 133,
       "versionNonce": 227058200,
