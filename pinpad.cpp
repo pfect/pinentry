@@ -25,6 +25,9 @@
 #include <QTime>
 #include <QProcess>
 #include <QNetworkInterface>
+#include <QObject>
+#include <usb.h>
+
 
 #define NK_STATUS_FIFO_FILE       "/tmp/nk_status"
 #define PIN_CODE_FIFO_FIFLE       "/tmp/pincode"
@@ -34,7 +37,6 @@ PinPad::PinPad(QWidget *parent) :
     ui(new Ui::PinPad)
 {
     ui->setupUi(this);
-
 
 }
 
@@ -98,7 +100,7 @@ QString PinPad::readStatusFifo()
         for(int a=0; a < addresses.size(); a++)
         {
           QString ip = addresses[a].ip().toString();
-          qDebug() << "possible address: " << interfaceName << "->" << ip;
+          // qDebug() << "possible address: " << interfaceName << "->" << ip;
 
           if ( interfaceName.contains("tun0") ) {
               ui->interface_1_status->setStyleSheet("background-color: rgb(41, 239, 41);");

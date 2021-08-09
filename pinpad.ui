@@ -6,12 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>194</width>
-    <height>463</height>
+    <width>189</width>
+    <height>482</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>PinPad</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="images.qrc">
+    <normaloff>:/img/nk.png</normaloff>:/img/nk.png</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QLabel" name="statusTitle">
@@ -19,21 +23,24 @@
      <rect>
       <x>10</x>
       <y>200</y>
-      <width>141</width>
+      <width>171</width>
       <height>19</height>
      </rect>
     </property>
     <property name="text">
-     <string>Key loading status</string>
+     <string>KEYING STATUS</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QFrame" name="pinFrame">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>280</y>
+      <y>320</y>
       <width>171</width>
-      <height>101</height>
+      <height>81</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -46,7 +53,7 @@
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>30</y>
+       <y>10</y>
        <width>113</width>
        <height>21</height>
       </rect>
@@ -61,19 +68,6 @@
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QLabel" name="pinCodeTitle">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>5</y>
-       <width>161</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>NITROKEY PIN CODE</string>
-     </property>
-    </widget>
     <widget class="QPushButton" name="pinSubmit">
      <property name="enabled">
       <bool>false</bool>
@@ -81,7 +75,7 @@
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>60</y>
+       <y>40</y>
        <width>111</width>
        <height>27</height>
       </rect>
@@ -121,6 +115,11 @@
        <height>31</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
      <property name="frameShape">
       <enum>QFrame::NoFrame</enum>
      </property>
@@ -135,10 +134,10 @@
    <widget class="QLabel" name="pinNotify">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>200</y>
-      <width>21</width>
-      <height>21</height>
+      <x>10</x>
+      <y>270</y>
+      <width>171</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -218,7 +217,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>410</y>
+      <y>430</y>
       <width>171</width>
       <height>41</height>
      </rect>
@@ -291,16 +290,22 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>390</y>
+      <y>410</y>
       <width>171</width>
       <height>19</height>
      </rect>
     </property>
     <property name="text">
-     <string>Network Interface keying</string>
+     <string>NETWORK STATUS</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="nitroKeyImage">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -359,6 +364,22 @@
     </property>
     <property name="scaledContents">
      <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pinCodeTitle">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>300</y>
+      <width>171</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>NITROKEY PIN CODE</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>
