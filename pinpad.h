@@ -20,17 +20,13 @@ public slots:
     void writeStatusFifo();
     void writePinCode(char *pinCode);
 
-
-
 private slots:
     void on_pinSubmit_clicked();
     void on_connectButton_clicked();
     void on_disconnectButton_clicked();
 
-
 private:
     Ui::PinPad *ui;
-
 
 };
 

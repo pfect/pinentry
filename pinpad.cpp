@@ -28,7 +28,6 @@
 #include <QObject>
 #include <usb.h>
 
-
 #define NK_STATUS_FIFO_FILE       "/tmp/nk_status"
 #define PIN_CODE_FIFO_FIFLE       "/tmp/pincode"
 
@@ -89,7 +88,7 @@ QString PinPad::readStatusFifo()
         }
     }
 
-    // Get interface names & ip
+    /* Get interface names & ipv4 addresses */
     QList<QNetworkInterface> ifaces = QNetworkInterface::allInterfaces();
     if ( !ifaces.isEmpty() )
     {
@@ -98,9 +97,9 @@ QString PinPad::readStatusFifo()
         QList<QNetworkAddressEntry> addresses = ifaces[i].addressEntries();
         QString interfaceName = ifaces[i].humanReadableName();
         for(int a=0; a < addresses.size(); a++)
-        {
+        {          
           QString ip = addresses[a].ip().toString();
-          // qDebug() << "possible address: " << interfaceName << "->" << ip;
+          if (!addresses[a].ip().toIPv4Address() ) continue;
 
           if ( interfaceName.contains("tun0") ) {
               ui->interface_1_status->setStyleSheet("background-color: rgb(41, 239, 41);");
@@ -120,7 +119,6 @@ QString PinPad::readStatusFifo()
               ui->interface_3_status->setToolTip(interfaceName + ":" +ip);
               ui->key_2->setVisible(false);
           }
-
         }
       }
     }
@@ -133,7 +131,6 @@ void PinPad::on_pinSubmit_clicked()
     QByteArray ba = pinCode.toLocal8Bit();
     char *c_pinCode = ba.data();
     writePinCode(c_pinCode);
-
 }
 
 PinPad::~PinPad()
@@ -147,11 +144,9 @@ void PinPad::on_connectButton_clicked()
     QString program="/opt/glorytun/start.sh";
     QString arguments = "";
     p->start(program,QStringList() << arguments);
-
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(readStatusFifo()));
     timer->start(500);
-
     ui->pinSubmit->setEnabled(true);
 }
 
@@ -164,7 +159,6 @@ void PinPad::on_disconnectButton_clicked()
     ui->statusLabel->setText("Disconnected");
     ui->pinCode->setText("");
     ui->pinNotify->setStyleSheet("");
-
     ui->interface_1_status->setStyleSheet("");
     ui->interface_2_status->setStyleSheet("");
     ui->interface_3_status->setStyleSheet("");
