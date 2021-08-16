@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>189</width>
-    <height>482</height>
+    <height>534</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,14 +15,14 @@
   </property>
   <property name="windowIcon">
    <iconset resource="images.qrc">
-    <normaloff>:/img/nk.png</normaloff>:/img/nk.png</iconset>
+    <normaloff>:/img/pinentry.png</normaloff>:/img/pinentry.png</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QLabel" name="statusTitle">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>200</y>
+      <y>365</y>
       <width>171</width>
       <height>19</height>
      </rect>
@@ -38,7 +38,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>320</y>
+      <y>30</y>
       <width>171</width>
       <height>81</height>
      </rect>
@@ -92,7 +92,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>220</y>
+      <y>385</y>
       <width>171</width>
       <height>51</height>
      </rect>
@@ -135,7 +135,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>270</y>
+      <y>435</y>
       <width>171</width>
       <height>16</height>
      </rect>
@@ -154,9 +154,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
+      <y>140</y>
       <width>171</width>
-      <height>111</height>
+      <height>151</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -165,12 +165,12 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QPushButton" name="connectButton">
+    <widget class="QPushButton" name="connectButton_1">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>40</y>
-       <width>151</width>
+       <x>20</x>
+       <y>10</y>
+       <width>61</width>
        <height>27</height>
       </rect>
      </property>
@@ -182,7 +182,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>70</y>
+       <y>110</y>
        <width>151</width>
        <height>27</height>
       </rect>
@@ -191,25 +191,183 @@
       <string>Disconnect</string>
      </property>
     </widget>
-    <widget class="QLabel" name="connTitle">
+    <widget class="QPushButton" name="connectButton_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>61</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Connect</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="connectButton_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>61</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Connect</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="connectButton_4">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>10</y>
+       <width>61</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Connect</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="connectButton_5">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>40</y>
+       <width>61</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Connect</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="connectButton_6">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>70</y>
+       <width>61</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Connect</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="conActive_1">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>10</y>
-       <width>151</width>
-       <height>19</height>
+       <width>10</width>
+       <height>27</height>
       </rect>
      </property>
-     <property name="font">
-      <font>
-       <pointsize>14</pointsize>
-      </font>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
      </property>
      <property name="text">
-      <string>Tunnel</string>
+      <string/>
      </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
+    </widget>
+    <widget class="QLabel" name="conActive_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>10</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="conActive_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>10</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="conActive_4">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>10</y>
+       <width>10</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="conActive_5">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>40</y>
+       <width>10</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="conActive_6">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>70</y>
+       <width>10</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
    </widget>
@@ -217,7 +375,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>430</y>
+      <y>480</y>
       <width>171</width>
       <height>41</height>
      </rect>
@@ -290,7 +448,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>410</y>
+      <y>460</y>
       <width>171</width>
       <height>19</height>
      </rect>
@@ -309,7 +467,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>130</y>
+      <y>295</y>
       <width>171</width>
       <height>61</height>
      </rect>
@@ -328,7 +486,7 @@
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>145</y>
+      <y>310</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -349,7 +507,7 @@
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>145</y>
+      <y>310</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -370,13 +528,34 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>300</y>
+      <y>10</y>
       <width>171</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
      <string>NITROKEY PIN CODE</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="connTitle">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>151</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>TUNNEL CONTROL</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>

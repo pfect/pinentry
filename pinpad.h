@@ -22,12 +22,21 @@ public slots:
 
 private slots:
     void on_pinSubmit_clicked();
-    void on_connectButton_clicked();
+    void on_connectButton_1_clicked();
+    void on_connectButton_2_clicked();
+    void on_connectButton_3_clicked();
+    void on_connectButton_4_clicked();
+    void on_connectButton_5_clicked();
+    void on_connectButton_6_clicked();
     void on_disconnectButton_clicked();
+    void resetConActiveColors();
+    void startConnection();
+    void stopConnection();
 
 private:
     Ui::PinPad *ui;
-
+    void readSettings(int id);
+    void writeSettings(int id, QString connectionName);
 };
 
 #endif // PINPAD_H
